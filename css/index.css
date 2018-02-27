@@ -1,0 +1,76 @@
+body {
+  display: grid;
+  grid-gap: 20px; }
+
+.navigation {
+  display: grid;
+  grid-template-areas: "img loc loc search search search search acc cart" "img loc loc search search search search acc cart" "img loc loc search search search search acc cart";
+  min-height: 60px;
+  background: #484d4f;
+  color: white; }
+  .navigation .image-area {
+    grid-area: img;
+    height: 60px;
+    padding-top: 10px;
+    text-align: center; }
+  .navigation .location-block {
+    grid-area: loc;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 15px; }
+    .navigation .location-block .open-down {
+      display: inline-block;
+      padding-top: 10px;
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 5px; }
+  .navigation .search-store {
+    grid-area: search;
+    text-align: center;
+    padding-top: 10px; }
+    .navigation .search-store input {
+      width: 80%;
+      border-radius: 4px;
+      padding: 5px;
+      box-shadow: 0 0 5px #999; }
+    .navigation .search-store .search-button {
+      margin: 0;
+      border-radius: 4px;
+      margin-left: -65px;
+      border-radius: 2px;
+      background: #ececec;
+      border: none;
+      cursor: pointer;
+      padding: 5px 22px;
+      color: #999; }
+  .navigation .my-account {
+    grid-area: acc;
+    text-align: center;
+    padding-top: 15px; }
+    .navigation .my-account .open-down {
+      display: inline-block;
+      padding-top: 10px;
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 5px; }
+  .navigation .cart {
+    grid-area: cart;
+    text-align: center;
+    padding-top: 15px; }
+    .navigation .cart .open-cart {
+      display: inline-block;
+      padding-top: 10px;
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 5px; }
+  .navigation img {
+    width: 36px;
+    height: 36px; }
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    grid-template-areas: "img loc acc cart" "search search search search"; }
+    .navigation .search-store {
+      padding-bottom: 20px;
+      width: 100%;
+      margin: 0; } }

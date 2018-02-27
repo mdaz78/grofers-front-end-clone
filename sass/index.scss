@@ -1,0 +1,108 @@
+body {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.navigation {
+  display: grid;
+  grid-template-areas: "img loc loc search search search search acc cart" "img loc loc search search search search acc cart" "img loc loc search search search search acc cart";
+  min-height: 60px;
+  background: #484d4f;
+  color: white;
+
+  .image-area {
+    grid-area: img;
+    height: 60px;
+    padding-top: 10px;
+    text-align: center;
+    // border: 1px solid grey;
+  }
+
+  .location-block {
+    grid-area: loc;
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 15px;
+    // border: 1px solid grey;
+
+    .open-down {
+      display: inline-block;
+      padding-top: 10px;
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 5px;
+    }
+  }
+
+  .search-store {
+    grid-area: search;
+    text-align: center;
+    padding-top: 10px;
+    // border: 1px solid grey;
+
+    input {
+      width: 80%;
+      border-radius: 4px;
+      padding: 5px;
+      box-shadow: 0 0 5px #999;
+    }
+
+    .search-button {
+      margin: 0;
+      border-radius: 4px;
+      margin-left: -65px;
+      border-radius: 2px;
+      background: darken(#f9f9f9, 5%);
+      border: none;
+      cursor: pointer;
+      padding: 5px 22px;
+      color: #999;
+    }
+  }
+
+  .my-account {
+    grid-area: acc;
+    text-align: center;
+    padding-top: 15px;
+    // border: 1px solid grey;
+
+    .open-down {
+      display: inline-block;
+      padding-top: 10px;
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 5px;
+    }
+  }
+
+  .cart {
+    grid-area: cart;
+    text-align: center;
+    padding-top: 15px;
+
+    .open-cart {
+      display: inline-block;
+      padding-top: 10px;
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 5px;
+    }
+  }
+
+  img {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    grid-template-areas: "img loc acc cart" "search search search search";
+
+    .search-store {
+      padding-bottom: 20px;
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
